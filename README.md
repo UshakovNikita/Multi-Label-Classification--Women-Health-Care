@@ -21,3 +21,5 @@ For data preprocessing, I will use a pipeline, which, depending on the type of c
       After imputation, the data is optionally normalized (where this is important) and the most informative columns are selected using PCA
    
 3. ENCODING: for ML algorithms that work only with numbers, produce one-hot encoding or another type of encoding of categorical columns, depending on the statistics of their unique values
+
+These steps will be implemented as classes equipped with "fit" and "transform" methods.
