@@ -9,7 +9,7 @@ To solve the problem, several models with common preprocessing were used. I star
 PREPROCESSING PIPELINE:
 For data preprocessing, I will use a pipeline, which, depending on the type of column, will produce 3 main transformations:
 
-1. CLEANING: removing some of the columns (uninformative or highly correlated with others), counting the number of missing values in a row (extra feature)
+1. CLEANING: removing some of the columns (uninformative or highly correlated with others), counting the number of missing values in a row (extra feature). It is necessary to separate the first step of the pipeline into a separate class, so that no algorithms are applied to the data for validation, but simply select those columns that remain in the data for training.
 
 2. IMPUTING & SCALING: imputing missing values using one of the algorithms:
         -SimpleImputer - imputing with a constant value that obviously goes beyond the boundaries of the existing data (a solid choice for decision trees e.g). In our case, a large negative value is suitable, because the dataset is filled with positive values only
